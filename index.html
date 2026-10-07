@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Student Hub | Study & Productivity</title>
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ 
+    <header>
+        <h1>Smart Student Hub</h1>
+        <button id="darkModeButton" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    
+        <p>Your simple space to study, plan and stay productive.</p>
+    </header>
+ 
+    <main>
+        <section class="dashboard">
+    <div class="stat-box">
+        <h3>📝 Notes</h3>
+        <p id="totalNotes">0</p>
+    </div>
+ 
+    <div class="stat-box">
+        <h3>✅ Tasks</h3>
+        <p id="totalTasks">0</p>
+    </div>
+ 
+    <div class="stat-box">
+        <h3>🎯 Completed</h3>
+        <p id="completedTasks">0</p>
+    </div>
+ 
+    <div class="stat-box">
+        <h3>📈 Progress</h3>
+        <p id="dashboardProgress">0%</p>
+    </div>
+</section>
+ 
+ 
+        <section class="welcome">
+            <h2>Welcome, Student! 👋</h2>
+            <p>Manage your study routine in one place.</p>
+        </section>
+ 
+        <section class="features">
+ 
+            <div class="card">
+                <h3>📚 Study Notes</h3>
+                <p>Keep your important study resources organized.</p>
+                <button id="notesButton">Open Notes</button>
+                <div id="notesSection">
+    <h4>📝 My Study Notes</h4>
+ 
+    <input type="text" id="noteTitle" placeholder="Note title">
+ 
+    <textarea id="noteText" placeholder="Write your note here..."></textarea>
+ 
+    <button id="addNoteButton">Add Note</button>
+ 
+    <div id="notesList"></div>
+</div>
+            </div>
+ 
+            <div class="card">
+                <h3>✅ To-Do List</h3>
+                <p>Track your daily study tasks and goals.</p>
+                <button id="taskButton">View Tasks</button>
+                <input type="text" id="taskInput" placeholder="✍️ What do you need to accomplish?">
+ 
+<button id="addTaskButton">＋ Add Task</button>
+ 
+ 
+ <ul id="taskList"></ul>
+ 
+            </div>
+ 
+            <div class="card">
+                <h3>⏰ Study Timer</h3>
+                <p>Focus on your studies with a simple timer.</p>
+                <button id="timerButton">Start Timer</button>
+                <button id="resetTimerButton">Reset</button>
+                <p id="timerDisplay">25:00</p>
+            </div> 
+        </section>
+ <section class="progress">
+    <h2>📊 Study Progress</h2>
+    <p>Track your daily study goal.</p>
+ 
+    <input type="text" id="subjectInput" placeholder="Enter subject">
+    <input type="number" id="progressInput" placeholder="Progress %">
+ 
+    <button id="progressButton">Update Progress</button>
+ 
+    <p id="progressText">Progress: 0%</p>
+ 
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+</section>
+    </main>
+    <section class="tips">
+    <h2>💡 Quick Study Tips</h2>
+ 
+    <div class="tip-box">
+        <p>📚 Make short notes while studying.</p>
+        <p>⏰ Take a short break after each study session.</p>
+        <p>🎯 Set small daily goals and complete them.</p>
+        <p>💧 Stay hydrated and keep your study space organized.</p>
+    </div>
+</section>
+ 
+ 
+    <footer>
+        <p>© 2026 Smart Student Hub</p>
+    </footer>
+    <script src="script.js"></script>
+ 
+</body>
+</html>
+
+ 

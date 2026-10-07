@@ -1,0 +1,445 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #222;
+}
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+ 
+h2 {
+    color: #333;
+}
+ 
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+ 
+header {
+    background-color: #6c63ff;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+ 
+.welcome {
+    background-color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 30px 20px 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+.features {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px 20px;
+}
+ 
+.card {
+    background-color: white;
+    width: 30%;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #554ee0;
+}
+ 
+/* NOTES */
+ 
+#notesSection {
+    margin-top: 20px;
+    display: none;
+    padding: 20px;
+    background-color: #f8f8ff;
+    border-radius: 12px;
+}
+ 
+#notesSection input,
+#notesSection textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+ 
+#notesSection textarea {
+    height: 100px;
+    resize: vertical;
+}
+ 
+#notesList {
+    margin-top: 20px;
+}
+ 
+#notesList > div {
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6c63ff;
+}
+ 
+#notesList h4 {
+    margin-top: 0;
+    color: #6c63ff;
+}
+ 
+#notesList p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+ 
+.deleteNoteButton {
+    background-color: #ff5c5c;
+    padding: 7px 12px;
+    font-size: 13px;
+}
+ 
+.deleteNoteButton:hover {
+    background-color: #e04444;
+}
+ 
+/* TODO */
+ 
+#taskInput {
+    width: 70%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+ 
+#addTaskButton {
+    margin-left: 5px;
+}
+ 
+#taskButton {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+ 
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+ 
+#taskList li {
+    background-color: #f8f8ff;
+    color: #222;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+#taskList li button {
+    background-color: #ff5c5c;
+    padding: 7px 12px;
+    border-radius: 6px;
+}
+ 
+#taskList li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+ 
+/* TIMER */
+ 
+#timerButton,
+#resetTimerButton {
+    margin: 5px;
+    font-weight: bold;
+}
+ 
+#resetTimerButton {
+    background-color: #ff5c5c;
+}
+ 
+#resetTimerButton:hover {
+    background-color: #e04444;
+}
+ 
+#timerDisplay {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+ 
+/* PROGRESS */
+ 
+.progress {
+    background-color: white;
+    color: #222;
+    margin: 30px 20px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid #6c63ff;
+}
+ 
+.progress input {
+    width: 180px;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+ 
+#progressButton {
+    margin-top: 8px;
+    font-weight: bold;
+}
+ 
+#progressText {
+    font-size: 18px;
+    font-weight: bold;
+}
+ 
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+ 
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background-color: #6c63ff;
+    border-radius: 15px;
+    transition: width 0.6s ease;
+}
+ 
+/* FOOTER */
+ 
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+ 
+ 
+
+   /* DARK MODE */
+ 
+body.dark-mode {
+    background-color: #12121c !important;
+    color: white !important;
+}
+ 
+body.dark-mode .welcome,
+body.dark-mode .card,
+body.dark-mode .progress {
+    background-color: #252538 !important;
+    color: white !important;
+}
+ 
+body.dark-mode #notesSection {
+    background-color: #252538 !important;
+    color: white !important;
+}
+ 
+body.dark-mode #notesList > div {
+    background-color: #34344d !important;
+    color: white !important;
+}
+ 
+body.dark-mode #taskList li {
+    background-color: #34344d !important;
+    color: white !important;
+}
+ 
+body.dark-mode #taskInput,
+body.dark-mode #noteTitle,
+body.dark-mode #noteText,
+body.dark-mode .progress input {
+    background-color: #34344d !important;
+    color: white !important;
+}
+ 
+body.dark-mode .progress-bar {
+    background-color: #44445a !important;
+}
+ 
+body.dark-mode footer {
+    background-color: #08080d !important;
+}
+body.dark-mode header {
+    background-color: #1b1b2b !important;
+    color: white !important;
+}
+
+ 
+ 
+ 
+ 
+/* MOBILE */
+ 
+@media (max-width: 768px) {
+ 
+    .features {
+        flex-direction: column;
+    }
+ 
+    .card {
+        width: 100%;
+    }
+ 
+}
+.dashboard {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+ 
+.stat-box {
+    background-color: white;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #6c63ff;
+}
+ 
+.stat-box h3 {
+    margin-bottom: 10px;
+}
+ 
+.stat-box p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6c63ff;
+    margin: 0;
+}
+ 
+body.dark-mode .stat-box {
+    background-color: #252538 !important;
+    color: white !important;
+}
+ 
+body.dark-mode .stat-box p {
+    color: #aaa5ff;
+}
+/* MOBILE RESPONSIVE */
+ 
+@media (max-width: 768px) {
+ 
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .card {
+        width: 90%;
+    }
+ 
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .stat-box {
+        width: 90%;
+    }
+ 
+    .welcome,
+    .progress {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ 
+    header {
+        padding: 30px 15px;
+    }
+ 
+    header h1 {
+        font-size: 28px;
+    }
+}
+ 
+<section class="tips">
+    <h2>💡 Quick Study Tips</h2>
+ 
+    <div class="tip-box">
+        <p>📚 Make short notes while studying.</p>
+        <p>⏰ Take a short break after each study session.</p>
+        <p>🎯 Set small daily goals and complete them.</p>
+        <p>💧 Stay hydrated and keep your study space organized.</p>
+    </div>
+</section>
+ 
+/* QUICK STUDY TIPS */
+ 
+.tips {
+    background-color: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+ 
+.tips h2 {
+    color: #6c63ff;
+    margin-bottom: 20px;
+}
+ 
+.tip-box {
+    display: grid;
+    gap: 12px;
+}
+ 
+.tip-box p {
+    background-color: #f5f3ff;
+    padding: 12px;
+    margin: 0;
+    border-radius: 10px;
+}
+ 
+ 
+ 
